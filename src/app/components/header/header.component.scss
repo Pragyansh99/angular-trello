@@ -1,0 +1,21 @@
+.header__section {
+  background-color: black;
+  color: white;
+  text-align: left;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.display__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1_head {
+  margin: 0px;
+}

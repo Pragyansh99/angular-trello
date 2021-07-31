@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="layout">
+    <div class="btn_container">
+      <button mat-raised-button color="primary" (click)="openAddUser()">
+        Add User
+      </button>
+    </div>
+    <div class="users_container" cdkDropListGroup>
+      <div class="user__box" *ngFor="let user of users; let i = index">
+        <div class="user_header">
+          <p>{{ user.user }}</p>
+          <i
+            class="fas fa-times-circle delete_user"
+            (click)="removeUser(user.user)"
+          ></i>
+        </div>
+
+        <div
+          class="user_content"
+          cdkDropList
+          [cdkDropListData]="user.tasks"
+          (cdkDropListDropped)="drop($event, user, i)"
+        >
+          <div *ngFor="let task of user.tasks" class="user_list_item">
+            <!-- <i class="fas fa-angle-right"></i> -->
+            <div cdkDrag class="task_detail">
+              <p [attr.id]="'user' + i">
+                {{ task }}
+              </p>
+            </div>
+            <div class="user_list_item" *cdkDragPlaceholder>
+              <p>
+                {{ task }}
+              </p>
+            </div>
+            <i
+              class="fas fa-times-circle delete_task"
+              (click)="deleteTask(user.user, task)"
+            ></i>
+          </div>
+        </div>
+        <div class="user_footer">
+          <button mat-fab color="amber" (click)="openAddTask(user)">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

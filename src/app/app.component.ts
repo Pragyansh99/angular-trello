@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from './providers/users.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-trello';
+  constructor (private user: UsersService){
+    user.refreshUserList();
+  }
 }

@@ -1,0 +1,13 @@
+<section class="add__task">
+  <div class="header">
+    <h5> Add Task </h5>
+  </div>
+  <div class="content">
+    <p class="label"> Add task for {{user?.user}} </p>
+    <input type="text" [(ngModel)]="task">
+    <p class="error_message" *ngIf="errorMessage"> {{errorMessage}} </p>
+  </div>
+  <div class="footer">
+    <button mat-raised-button color="secondary" [disabled]="!task" (click)="addTask()">Add Task</button>
+  </div>
+</section>

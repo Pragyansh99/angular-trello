@@ -1,0 +1,130 @@
+.layout {
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_container {
+  margin: 10px 0px 10px auto;
+}
+
+.users_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user__box {
+  flex-basis: 300px;
+  min-height: 210px;
+  max-height: 310px;
+  background-color: #add8e6;
+  margin: 0px 20px 20px 0px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.user_header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.user_header p {
+  margin: 0px;
+}
+
+.delete_user {
+  cursor: pointer;
+  color: #cfcfcf;
+  transition: all 0.4s ease;
+}
+
+.delete_user:hover {
+  color: white;
+}
+
+.user_content {
+  padding: 15px;
+  min-height: 135px;
+  max-height: 195px;
+  overflow-y: auto;
+}
+
+.user_list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #EEEE9B;
+  padding: 10px 7px;
+  margin-bottom: 10px;
+  position: relative;
+}
+// .user_list_item i {
+//   margin: 0px 8px 0px 0px;
+// }
+
+.task_detail {
+  flex-grow: 1;
+  p {
+    font-style: italic;
+    margin: 0px;
+  }
+}
+.delete_task {
+  font-size: 15px;
+  color: #3f3f3f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.delete_task:hover {
+color: black;
+}
+
+.user_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 0px;
+}
+
+// DRAG DROP LIBRARY CUSTOM CSS
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+// button
+::ng-deep .mat-fab {
+  height: 35px !important;
+  width: 35px !important;
+}
+::ng-deep .mat-fab .mat-button-wrapper {
+  padding: 0px !important;
+}

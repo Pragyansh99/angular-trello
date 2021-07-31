@@ -1,0 +1,15 @@
+// Mat dialog custom CSS
+::ng-deep .mat-dialog-container {
+  background: white;
+  color: black;
+}
+
+::ng-deep .error_message {
+  margin: 5px;
+  padding: 10px;
+  background-color: pink;
+  color:darkred;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}

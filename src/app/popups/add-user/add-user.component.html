@@ -1,0 +1,14 @@
+<section class="add__user">
+  <div class="header">
+    <h5> Add User </h5>
+  </div>
+  <div class="content">
+    <p class="label"> Provide a username for user </p>
+    <input type="text" [(ngModel)]="username" maxlength="30">
+    <p class="error_message" *ngIf="errorMessage"> {{errorMessage}} </p>
+  </div>
+  <div class="footer">
+    <button mat-raised-button color="secondary" [disabled]="!username" (click)="addUser()">Add User</button>
+  </div>
+</section>
+

@@ -27,6 +27,9 @@ export class UsersService {
     try {
       const userList = localStorage.getItem('user_list') as any;
       user_list = JSON.parse(userList)
+      if(!user_list) {
+        user_list = []
+      }
     } catch (e) {
       user_list = []
     }

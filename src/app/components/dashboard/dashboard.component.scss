@@ -17,7 +17,7 @@
 
 .user__box {
   flex-basis: 300px;
-  min-height: 210px;
+  min-height: 310px;
   max-height: 310px;
   background-color: #add8e6;
   margin: 0px 20px 20px 0px;
@@ -52,8 +52,8 @@
 
 .user_content {
   padding: 15px;
-  min-height: 135px;
-  max-height: 195px;
+  min-height: 215px;
+  max-height: 215px;
   overflow-y: auto;
 }
 
@@ -65,6 +65,9 @@
   padding: 10px 7px;
   margin-bottom: 10px;
   position: relative;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 // .user_list_item i {
 //   margin: 0px 8px 0px 0px;
